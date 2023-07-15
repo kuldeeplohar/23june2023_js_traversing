@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>traversing</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+        <style>
+
+        </style>
+        <script>
+
+        </script>    
+    </head>
+    <body>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+      
+        <table class="table w-50 mt-5 offset-3" >
+            <thead>
+               <tr>
+                <th>student</th>
+                <th>name</th>
+                <th>surename</th>
+                <th>Action</th>
+               </tr>
+              
+            </thead>
+            <tbody>
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+
+               <tr>
+                <td>1</td>
+                <td>kuldeep</td>
+                <td>Lohar</td>
+                <td>
+                    <button class="btn btn bg-success" onclick="kuldeep(this)">View</button>
+                    <button class="btn btn bg-primary" onclick="kuldeep1(this)" >Edit</button>
+                    <button class="btn btn bg-danger"onclick="kuldeep2(this)">Delete</button> 
+                </td>
+               </tr>
+               <tr>
+                <td>2</td>
+                <td>Rohit</td>
+                <td>Mali</td>
+                <td>
+                    <button class="btn btn bg-success k_viewbtn">View</button>
+                    <button class="btn btn bg-primary"onclick="kuldeep1(this)">Edit</button>
+                    <button class="btn btn bg-danger"onclick="kuldeep2(this)">Delete</button>
+
+                </td>
+               </tr>
+               <tr>
+                <td>3</td>
+                <td>Rakesh</td>
+                <td>Sing</td>
+                <td>
+                    <button class="btn btn bg-success k_viewbtn1">View</button>
+                    <button class="btn btn bg-primary"onclick="kuldeep1(this)">Edit</button>
+                    <button class="btn btn bg-danger"onclick="kuldeep2(this)">Delete</button>
+
+                </td>
+               </tr>
+               <tr>
+                <td>4</td>
+                <td>Pankaj</td>
+                <td>Rathor</td>
+                <td>
+                    <button class="btn btn bg-success" onclick="kuldeep(this)">View</button>
+                    <button class="btn btn bg-primary"onclick="kuldeep1(this)">Edit</button>
+                    <button class="btn btn bg-danger"onclick="kuldeep2(this)">Delete</button>
+
+              </td>
+               </tr>
+            </tbody>
+        </table>
+        <script>
+          let kuldeep=(e)=>{
+            
+            console.log(event.target.closest('tr').querySelector("td:nth-child(2)").innerHTML);
+
+          }
+
+          let kuldeep1=(e)=>{
+            
+            console.log(event.target.closest('tr').querySelector("td:nth-child(1)").innerHTML);
+
+          }
+
+          let kuldeep2=(e)=>{
+            
+            console.log(event.target.closest('tr').querySelector("td:nth-child(3)").innerHTML);
+
+          }
+          
+           
+          
+            console.log(document.querySelector('button.k_viewbtn'))
+            document.querySelector("button.k_viewbtn").addEventListener('click' ,(e)=>{
+                console.log(e.target.closest('tr').querySelector('td:nth-child(2)').innerHTML);
+            })
+
+
+            console.log(document.querySelector('button.k_viewbtn1'))
+            document.querySelector("button.k_viewbtn1").addEventListener('click' ,(e)=>{
+                console.log(e.target.closest('tr').querySelector("td:nth-child(2)").innerHTML);
+            })
+        </script>
+    </body>
+</html>
